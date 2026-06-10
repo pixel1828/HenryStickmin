@@ -16,9 +16,23 @@
     </style>
 </head>
 <body>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+    // 1. Removes "About Ruffle", "Save Manager", and all Ruffle items from right-click
+    "contextMenu": "none", 
+    
+    // 2. Kills the branded loading screen
+    "splashScreen": false,
+    
+    // 3. Blocks Ruffle-branded popups if an older SWF file has unsupported features
+    "warnOnUnsupportedContent": false 
+};
+
+    </script>
     <embed
         id="game"
-        src="app.swf"
+        src="https://henry-stickmin-archive.vercel.app/fling/app.swf"
         type="application/x-shockwave-flash">
 </body>
 </html>
